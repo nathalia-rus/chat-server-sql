@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Helvetica;
+  color: white;
+  background-color: #B8E1FF;
+  border: 0px solid black;
+}
+
+/* Ocultar la scrollbar
+::-webkit-scrollbar {
+    display: none;
+}
+*/
+
+body {
+  position: fixed;
+}
+
+.page {
+  display: inline-grid;
+  grid-template-columns: 300px 0px 1fr;
+  grid-template-rows: 100%;
+  height: 100vh;
+  width: 95vw;
+}
+
+table, th, td {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.contactbar {
+  background-color: white;
+  color: #484349;
+  overflow: scroll;
+}
+
+.letter {
+  background-color: #F7F0F0;
+  color: #484349;
+  text-align: left;
+}
+
+.barnames {
+  background-color: white;
+  color: #484349;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.sidebar {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  overflow: scroll;
+  height: auto;
+  padding: 10px;
+  grid-auto-flow: row;
+  grid-auto-rows: 100px;
+  grid-template-rows: 30px repeat(100, 1fr);
+  background-color: #4281A4;
+}
+
+.options {
+  height: 30px;
+  display: grid;
+  grid-row: 1;
+  grid-template-columns: 35px 240px;
+  background-color: #4281A4;
+}
+
+#mglass {
+  margin: 0px;
+  border: none;
+  grid-column: 1;
+  height: 25px;
+  background-color: white;
+  border-top-left-radius: 12.5px;
+  border-bottom-left-radius: 12.5px;
+  padding-left: 5px;
+}
+
+#mglassphoto {
+  background-color: transparent;
+  height: 25px;
+  width: 25px;
+
+}
+
+#search {
+  margin: 0px;
+  border: none;
+  grid-column: 2;
+  resize: none;
+  height: 25px;
+  background-color: white;
+  color: black;
+  padding-top: 7px;
+  border-top-right-radius: 12.5px;
+  border-bottom-right-radius: 12.5px;
+}
+
+#search:focus {
+  background-color: white;
+  outline: none;
+}
+
+.contact1 {
+  height: 90px;
+  display: grid;
+  grid-column: 1/ span 2;
+  grid-template-columns: 80px 70%;
+  padding: 5px;
+  grid-row-gap: 2px;
+  grid-template-rows: 1fr 1fr;
+  background-color: #4281A4;
+  border-bottom: 1px solid #484349;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.inactive {
+  background-color: black;
+}
+
+.image1 {
+  height: 1fr;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  text-align: center;
+  overflow: hidden;
+  background-color: transparent;
+
+}
+
+.photo1 {
+width: 100%;
+border-radius: 50%
+}
+
+.name1 {
+  height: 1fr;
+  grid-column: 2;
+  grid-row: 1;
+  padding-left: 10px;
+  padding-top: 15px;
+  background-color: transparent;
+  color: #484349;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.preview {
+  height: 1fr;
+  grid-column: 2;
+  grid-row: 2;
+  padding-left: 10px;
+  font-style: italic;
+  vertical-align: middle;
+  background-color: transparent;
+  color: #484349;
+  border-radius: 60px;
+}
+
+.chatgrid {
+  grid-column: 3;
+  grid-row: 1;
+  padding: 5px;
+  display: grid;
+  grid-template-rows: 1fr 100% 1;
+}
+
+.activechat {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  height: 120px;
+}
+
+#conversation {
+  margin:5px;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 5px;
+  display: grid;
+  align-items: flex-end;
+  grid-template-rows: 1fr;
+  overflow: auto; /* NOTE: height defined by code */
+  background-color: white;
+
+}
+
+#inputblock {
+  grid-column: 1;
+  grid-row: 3;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  height: fit-content;
+}
+
+.activeimage {
+  height: 1fr;
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+.activename {
+  height: 1fr;
+  grid-column: 2;
+  grid-row: 1;
+  padding-left: 20px;
+  font-size: 50px;
+  line-height: 100px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+#inputform {
+  background-color: hsl(0,0%,95%);
+  color: black;
+  resize: none;
+  padding: 10px;
+  font-size: 15px;
+  /* text-overflow: ellipsis; */
+  height: 55px;
+}
+
+#inputform:focus {
+  background-color: white;
+  outline: none;
+}
+
+
+.user {
+  border: 15px solid darkblue;
+  background-color: darkblue;
+  width: fit-content;
+  justify-self: end;
+  margin: 5px;
+}
+
+.ai {
+  border: 15px solid CornflowerBlue;
+  background-color: CornflowerBlue;
+  width: fit-content;
+  justify-self: start;
+}
+
+.animated {
+  animation: bounceAnimation 1s infinite;
+}
+
+@keyframes bounceAnimation {
+  0% {
+    font-size: 15px;
+  }
+  50% {
+    font-size: 20px;
+  }
+  100% {
+    font-size: 15px;
+  }
+}

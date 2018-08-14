@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chat Server</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="sidebar">
+        <div class="options"><div id="mglass"><img id="mglassphoto" src="images/mglass.png"></div><textarea id="search" name="searchBar" cols="1" placeholder="Search contact"></textarea>
+        </div>
+        <div class="contact1 active">
+          <div class="image1 active"><img class="photo1" src="images/contact_001.jpg"></div>
+          <div class="name1 active">Juan Carlos</div>
+          <div class="preview active"></div>
+        </div>
+      </div>
+      <div class="contactbar">
+        <table></table>
+      </div>
+      <div class="chatgrid">
+        <div class="activechat">
+          <div class="activeimage"><img class="photo1" src="images/contact_001.jpg"></div>
+          <div class="activename">Juan Carlos</div>
+        </div>
+        <div id="conversation">
+        </div>
+        <div id="inputblock"><textarea id="inputform" name="input" cols="1" autofocus="true"></textarea>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
